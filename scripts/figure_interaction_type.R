@@ -87,7 +87,7 @@ ggplot(TotalDeg, aes(x=as.integer(Hour), y=Degree, group=interaction(ID, Mod))) 
   scale_y_log10() +
   facet_wrap(~Group) +
   labs(title="Comparison of Hourly Interaction Count of Head-Head and Head-Body Interactions", color = "Metric") +
-  xlab("Hour") + ylab("Interaction Count") +
+  xlab("Time (Hour)") + ylab("Interaction Count") +
   theme_minimal() + 
   theme(
     plot.title = element_text(hjust = 0.5),
@@ -104,4 +104,5 @@ ggplot(TotalDeg, aes(x=as.integer(Hour), y=Degree, group=interaction(ID, Mod))) 
     axis.line.y = element_line(color = "black", size = 0.5),  # Add y-axis line
     strip.text = element_text(size = 14, face = "bold")  # Make facet plot titles larger and bold
   )
-ggsave("../figures/interaction_type_unstandardized.jpg", width = 8.5, height = 4, dpi =600)
+
+ggsave("../figures/fig2_interaction_type_unstandardized.jpg", width = 8.5, height = 4, dpi =600)

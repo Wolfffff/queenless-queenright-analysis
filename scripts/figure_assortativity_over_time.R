@@ -36,6 +36,8 @@ for(i in 1:10){
   }
 }
 
+TotalAss$QR <- factor(TotalAss$QR, levels = rev(levels(factor(TotalAss$QR))))
+
 # Assortativity Plotting ------------------------------------------------
 ggplot(data = TotalAss, aes(x = as.integer(Hour), y = values, group = interaction(Col, Mod))) + 
   geom_jitter(aes(color = QR), size = 1, alpha = 0.8, width = 0.2) +
@@ -44,7 +46,7 @@ ggplot(data = TotalAss, aes(x = as.integer(Hour), y = values, group = interactio
               size     = 1.5, 
               linetype = 1, 
               alpha    = .7)+
-  scale_color_manual(values = c("#161414", "#629CC0"), labels = c("Queenless", "Queenright"), guide = guide_legend(direction = "horizontal")) +
+  scale_color_manual(values = c("#629CC0", "#161414"), labels = c("Queenright","Queenless"), guide = guide_legend(direction = "horizontal")) +
   scale_x_continuous(breaks = c(0, seq(24, 96, by = 24)), limits = c(0, NA)) +  # Set x-axis limits and breaks similar to the first script
   theme_minimal() + 
   theme(
