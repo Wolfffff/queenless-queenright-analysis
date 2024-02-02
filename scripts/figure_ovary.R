@@ -84,7 +84,7 @@ ggplot(HBOvMeanRT, aes(x=AverageWidth, y=Sum)) +
               linetype = 1,  # Line type
               alpha    = .7,  # Transparency of the line
               aes(color = factor(Treatment))) +  # Color by treatment
-  scale_color_manual(values=c("#161414", "#629CC0"), labels = c("Queenless", "Queenright"), guide = guide_legend(direction = "horizontal")) +  # Adjust colors and labels
+  scale_color_manual(values=c("#629CC0", "#161414"), labels = c("Queenless", "Queenright"), guide = guide_legend(direction = "horizontal")) +  # Adjust colors and labels
   scale_x_continuous() +  # Use a continuous scale for x
   scale_y_continuous() +  # Use a continuous scale for y
   labs(title="Total Interaction Count vs Max Oocyte Width", color = "Treatment") +  # Adjust title and legend title
