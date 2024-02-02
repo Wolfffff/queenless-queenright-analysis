@@ -87,7 +87,7 @@ ggplot(HBOvMeanRT, aes(x=AverageWidth, y=Sum)) +
   scale_color_manual(values=c("#161414", "#629CC0"), labels = c("Queenless", "Queenright"), guide = guide_legend(direction = "horizontal")) +  # Adjust colors and labels
   scale_x_continuous() +  # Use a continuous scale for x
   scale_y_continuous() +  # Use a continuous scale for y
-  labs(title="Degree vs Avg Width, Head-Body", color = "Treatment") +  # Adjust title and legend title
+  labs(title="Total Interaction Count vs Max Oocyte Width", color = "Treatment") +  # Adjust title and legend title
   xlab("Average Max Oocyte Width (mm)") + ylab("Total Interaction Count") +  # Adjust axis labels
   theme_minimal() + 
   theme(
